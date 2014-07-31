@@ -1,22 +1,22 @@
 // Ajax suggestion almost similar google/facebook suggestion (similar google suggestion first version) 
 $().ready(function () {
-    var un = 'Nhập tựa sách cần tìm kiếm';
+    var un ="'Nhập tựa sách cần tìm kiếm";
     var text;
     $("[id$=txtSearch]").val(un);
     $("[id$=txtSearch]").css("color", "#C0C0C0");
     $("[id$=txtSearch]").blur(function () {
-        if ($(this).val() == '') {
+        if ($(this).val() == "") {
             $(this).val(un);
             $(this).css("color", "#C0C0C0");
         }
         $("#dropdown").hide("slow");
     });
     $("[id$=txtSearch]").click(function () {
-        if ($(this).val() == un) $(this).val('');
+        if ($(this).val() == un) $(this).val("");
         $(this).css("color", "black");
     });
     $("[id$=txtSearch]").focus(function () {
-        if ($(this).val() == un) $(this).val('');
+        if ($(this).val() == un) $(this).val("");
         $(this).css("color", "black");
     });
     $("[id$=txtSearch]").bind("input", function () {
@@ -53,7 +53,7 @@ $().ready(function () {
     var liSelected;
     $("[id$=txtSearch]").keyup(function (e) {
         if (e.which === 40) {//down
-            if ($('#dropdown').not(':visible')) {
+            if ($("#dropdown").not(":visible")) {
                 if (li.filter(function () {
                     return $(this).css("display") != "none"
                 }).length > 0)
@@ -76,7 +76,7 @@ $().ready(function () {
             if (liSelected.html() != "")
                 $("[id$=txtSearch]").val(liSelected.text());
         } else if (e.which === 38) {//up
-            if ($('#dropdown').not(':visible')) {
+            if ($("#dropdown").not(":visible")) {
                 if (li.filter(function () {
                     return $(this).css("display") != "none"
                 }).length > 0)
