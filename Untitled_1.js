@@ -1,4 +1,4 @@
-// Ajax suggestion almost similar google suggestion (similar google suggestion first version) 
+// Ajax suggestion almost similar google/facebook suggestion (similar google suggestion first version) 
 $().ready(function () {
     var un = 'Nhập tựa sách cần tìm kiếm';
     var text;
